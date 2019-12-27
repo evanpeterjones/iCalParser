@@ -23,25 +23,28 @@ void ical::printEvent(int year, int month, int day, std::string name, std::strin
   printf("%s %d, %d:%.15s%s\n", ical::getMonth(month).c_str(), day, year, name.c_str(), time.c_str());
 }
 
+std::string ical::getMonth(int month) {
+  
+}
+
 std::string ical::getMonth(int month)
 {
-  std::string str_month;
-  switch (month) {
-  case 1  : str_month = "January";
-  case 2  : str_month = "February";
-  case 3  : str_month = "March";
-  case 4  : str_month = "April";
-  case 5  : str_month = "May";
-  case 6  : str_month = "June";
-  case 7  : str_month = "July";
-  case 8  : str_month = "August";
-  case 9  : str_month = "September";
-  case 10 : str_month = "October";
-  case 11 : str_month = "November";
-  case 12 : str_month = "December";
-  default : str_month = "oops";
-  }
-  return str_month;
+  switch (month) 
+    {
+    case 1  : return "January";
+    case 2  : return "February";
+    case 3  : return "March";
+    case 4  : return "April";
+    case 5  : return "May";
+    case 6  : return "June";
+    case 7  : return "July";
+    case 8  : return "August";
+    case 9  : return "September";
+    case 10 : return "October";
+    case 11 : return "November";
+    case 12 : return "December";
+    default : return "oops";
+    }
 }
 
 std::string ical::getDate()
